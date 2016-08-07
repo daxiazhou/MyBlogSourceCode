@@ -5,11 +5,9 @@ date: 2016-08-8 00:03:24.000000000 +09:00
 ---
 
 
-#AutoLayout 和 Masonry
+在**AutoLayout**中, 我们不再直接设置view的几何属性, 而是通过给View添加约束(constraints), 系统会根据这些约束来实现布局.
 
-#AutoLayout
-
-##什么是约束（Constraint）？
+####什么是约束（Constraint）？
 [Auto Layout Guide](https://developer.apple.com/library/prerelease/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1) 给出的解释: *Each constraint represents a single equation.*
 
 ![image](../images/AutoLayoutAndMasonry/ConstraintEquation.png =600x)
@@ -18,7 +16,7 @@ date: 2016-08-8 00:03:24.000000000 +09:00
 
 ![image](../images/AutoLayoutAndMasonry/AutoLayoutAttributes.png =400x)
 
-##2. Intrinsic Content Size
+####Intrinsic Content Size
 
 Intrinsic Content Size依赖于视图的当前内容，如Button和Label的intrinsic content size依赖于它展示字符数量和字体大小。有些视图的intrinsic content size比较复杂，如ImageView，没有图片是就没有intrinsic content size，当添加了图片后intrinsic content size立刻变成当前图片的大小。AutoLayout使用一对Constraint从两个维度表现ntrinsic content size。
 
@@ -30,7 +28,7 @@ Intrinsic Content Size依赖于视图的当前内容，如Button和Label的intri
 ![image](../images/AutoLayoutAndMasonry/CommonControls.png =600x)
 
 
-#Masnary
+###Masnary
 Masonry 是一个轻量级的布局框架，使用优雅的链式语法封装自动布局，使用方便，可提高手写布局的开发效率。它提供了三个主要的API：
 
 	- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *make))block;
