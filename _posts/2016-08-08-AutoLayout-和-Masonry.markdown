@@ -35,7 +35,7 @@ Masonry 是一个轻量级的布局框架，使用优雅的链式语法封装自
 	- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *make))block;
 	- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *make))block;
 	- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block;
-
+{% endhighlight %}
 * **mas_makeConstraints**: 只负责新增约束 Autolayout 不能同时存在两条针对于同一对象的约束 否则会报错
 * **mas_updateConstraints**: 针对上面的情况，会更新在block中出现的约束，不会导致出现两个相同约束的情况
 * **mas_remakeConstraints**: 清除之前的所有约束，仅保留最新的约束
