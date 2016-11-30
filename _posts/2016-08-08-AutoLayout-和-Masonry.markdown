@@ -10,11 +10,11 @@ date: 2016-08-8 00:03:24
 ####什么是约束（Constraint）？
 [Auto Layout Guide](https://developer.apple.com/library/prerelease/content/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1) 给出的解释: *Each constraint represents a single equation.*
 
-![image](/images/AutoLayoutAndMasonry/ConstraintEquation.jpg =600x)
+![image](/images/AutoLayoutAndMasonry/ConstraintEquation.jpg)
 
 这个Constraint声明红色视图与蓝色视图间距为8。不仅可以在两个视图之间的属性设置Constraint，还可以在一个视图的两个不同属性之间设置Constraint，如视图的height与weight成一定比例。常用的AutoLayout属性如下图所示：
 
-![image](/images/AutoLayoutAndMasonry/AutoLayoutAttributes.jpg =400x)
+![image](/images/AutoLayoutAndMasonry/AutoLayoutAttributes.jpg)
 
 ####Intrinsic Content Size
 
@@ -25,7 +25,7 @@ Intrinsic Content Size依赖于视图的当前内容，如Button和Label的intri
 * Content Hugging: 使视图不向外扩张
 * Compression Resistance: 保持视图大小不被压缩
 并不是所有的视图都有 intrinsic content size。
-![image](../images/AutoLayoutAndMasonry/CommonControls.jpg =600x)
+![image](/images/AutoLayoutAndMasonry/CommonControls.jpg)
 
 
 ###Masnary
