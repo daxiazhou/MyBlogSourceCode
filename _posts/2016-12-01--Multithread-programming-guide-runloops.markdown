@@ -1,8 +1,9 @@
 ---
-layout: post
 title: 多线程编程指南（二）Run Loops
+layout: post
 date: 2016-12-01
 ---
+
 
 Run loop 是与线程密切相关的基础设施。通常，线程一次只执行一个任务，执行完毕后线程就会退出，Run loop 能够让线程能随时处理事件但并不退出。run loop 接收时间来自于两种源，分别是输入源(input source)和timer。输入源传送异步事件，通常来自于其它线程或者应用。timer 传递同步事件。如下图所示:
 
@@ -36,7 +37,7 @@ PerformSelector 实际上会建一个 Timer 添加到目标线程的 Run loop �
 ####3. Timer Sources
 其实就是 NSTimer ，相信大部分开发者都用过它。Timer 也要与run loop 的 mode 相关联，只有 run loop 运行的 mode 与 Timer 关联的 mode 相同，timer 才能工作。例如，新建一个工程，添加一个定时器到 runloop 的 NSDefaultRunLoopMode 中，然后拖一个 TextView 到 Storyboard 中，启动后拖着 TextView 滚动时，timer 就会停止打印 log，当松开后又会继续打印 log。
 
-```
+~~~objc
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -55,13 +56,13 @@ PerformSelector 实际上会建一个 Timer 添加到目标线程的 Run loop �
 {
     NSLog(@"---------------- run");
 }
-```
+~~~
 如果某个时间点被错过了，例如执行了一个很长的任务，则那个时间点的回调也会跳过去，不会延后执行。
 
 ####4. Observers
 每个 Observer 都包含了一个回调（函数指针），当 RunLoop 的状态发生变化时，观察者就能通过回调接受到这个变化。可以观察的几个节点:
 
-```
+~~~objc
 typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     kCFRunLoopEntry         = (1UL << 0), // 即将进入Loop
     kCFRunLoopBeforeTimers  = (1UL << 1), // 即将处理 Timer
@@ -70,10 +71,10 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     kCFRunLoopAfterWaiting  = (1UL << 6), // 刚从休眠中唤醒
     kCFRunLoopExit          = (1UL << 7), // 即将退出Loop
 };
-```
+~~~
 在代码中创建一个 Observer 观察状态的变化：
 
-```
+~~~objc
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -86,6 +87,6 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     // 释放observer，最后添加完需要释放掉
     CFRelease(observer);
 }
-```
+~~~
 控制台输出:
 ![](images/Runloops/runlooplog.jpg )
