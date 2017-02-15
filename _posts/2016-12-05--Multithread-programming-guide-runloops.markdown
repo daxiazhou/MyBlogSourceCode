@@ -1,7 +1,7 @@
 ---
 title: 多线程编程指南（二）Run Loops
 layout: post
-date: 2016-12-01
+date: 2016-12-05
 ---
 
 
@@ -89,4 +89,4 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
 }
 ~~~
 控制台输出:
-![](images/Runloops/runlooplog.jpg )
+![](/images/Runloops/runlooplog.jpg)
