@@ -1,4 +1,8 @@
-####Mysql
+---
+title: Mysql 命令
+layout: post
+date: 2017-02-21
+---
 
 #####1. 连接到 Mysql
 连接到本机的 Mysql
