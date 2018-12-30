@@ -12,7 +12,7 @@ Unicode 标准为世界上几乎所有的[^1]书写系统里所使用的每一�
 
 编码空间被分成 17 个平面（plane），每个平面有 65,536 个字符。
 
-![](../images/UnicodePlanes.jpg)
+![](../../../images/UnicodePlanes.jpg)
 
 0 号平面叫做「基本多文种平面」（Basic Multilingual Plane, BMP），涵盖了几乎所有你能遇到的字符。其它平面叫做补充平面，大多是空的。
 
