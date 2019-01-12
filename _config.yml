@@ -38,7 +38,6 @@ paginate_path: "page/:num/"
 comment:
     # disqus: vno-jekyll
     duoshuo: snail
-    
 # Social
 social:
     mail: woshizhoudaixa@gmail.com
