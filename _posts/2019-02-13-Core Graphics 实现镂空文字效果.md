@@ -81,8 +81,7 @@ Porter-Duff 这个名词是为了表达对 Thomas Porter 和 Tom Duff 的敬意�
 有两张图片
 
 <div align=center>
-	<img src="../../../images/Blend-Model/source.png" width = "256"/>
-	<img src="../../../images/Blend-Model/destination.png" width = "256"/>
+	<img src="../../../images/Blend-Model/source.png" width = "256"/><img src="../../../images/Blend-Model/destination.png" width = "256"/>
 </div>
 
 <!--![](../images/Blend-Model/source.png)
@@ -146,6 +145,11 @@ Demo 在[这里](https://github.com/daxiazhou/Demos/tree/master/BlendModesDemo)�
     [label.layer drawInContext:context];
     CGContextRestoreGState(context);
     
+    // 还可以在镂空文字价格半透明蒙层
+//    UIColor *textColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+//    [textColor setFill];
+//    UIRectFillUsingBlendMode(rect, kCGBlendModeDestinationOver);
+
 }
 ```
 成果展示
