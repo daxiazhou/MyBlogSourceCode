@@ -80,9 +80,9 @@ Porter-Duff 这个名词是为了表达对 Thomas Porter 和 Tom Duff 的敬意�
 
 有两张图片
 
-<div align=center>
+<center class="half">
 	<img src="../../../images/Blend-Model/source.png" width = "256"/><img src="../../../images/Blend-Model/destination.png" width = "256"/>
-</div>
+</center>
 
 <!--![](../images/Blend-Model/source.png)
 ![](../images/Blend-Model/destination.png)-->
