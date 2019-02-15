@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Porter-Duff Blending 实现镂空文字效果
-date: 2019-01-06 10:36:24
+date: 2019-02-14 10:36:24
 ---
 
 ###Blend Modes 
@@ -145,7 +145,7 @@ Demo 在[这里](https://github.com/daxiazhou/Demos/tree/master/BlendModesDemo)�
     [label.layer drawInContext:context];
     CGContextRestoreGState(context);
     
-    // 还可以在镂空文字价格半透明蒙层
+    // 还可以在镂空文字上加半透明蒙层
 //    UIColor *textColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
 //    [textColor setFill];
 //    UIRectFillUsingBlendMode(rect, kCGBlendModeDestinationOver);
